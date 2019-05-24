@@ -1,6 +1,6 @@
 using System;
 
-namespace FirstSystemAsp.Models {
+namespace FirstSystemAsp.Models.ViewModels {
     public class ErrorViewModel {
         public string RequestId { get; set; }
 

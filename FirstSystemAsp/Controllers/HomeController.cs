@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using FirstSystemAsp.Models;
+using FirstSystemAsp.Models.ViewModels;
 
 namespace FirstSystemAsp.Controllers {
     public class HomeController : Controller {
