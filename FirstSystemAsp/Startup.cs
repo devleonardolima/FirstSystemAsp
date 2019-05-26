@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using FirstSystemAsp.Models;
 
 namespace FirstSystemAsp {
     public class Startup {
@@ -28,6 +30,9 @@ namespace FirstSystemAsp {
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+    services.AddDbContext<FirstSystemAspContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("FirstSystemAspContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
